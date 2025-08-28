@@ -65,15 +65,45 @@ export default function SyntaxPage() {
 
           <Accordion title="🔤 2. System Declaration">
           <p>All systems are enclosed in double square brackets.</p>
-          <h3>Syntax:</h3>
-          <pre><code>{`⟦System Name⟧
-⟦System Name∞⟧  # Open boundary (interacts with environment)
-⟦Substrate:Function⟧  # Optional annotation`}</code></pre>
-          <h3>Examples:</h3>
-          <pre><code>{`⟦Climate System⟧
-⟦Neural Network∞⟧
-⟦Market:Regulation⟧
-⟦Mind:Self-Model⟧`}</code></pre>
+          <div className="overflow-x-auto">
+            <table>
+              <thead>
+                <tr>
+                  <th>Pattern</th>
+                  <th>Meaning</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>⟦System Name⟧</code></td>
+                  <td>Base system declaration</td>
+                </tr>
+                <tr>
+                  <td><code>⟦System Name∞⟧</code></td>
+                  <td>Open boundary (interacts with environment)</td>
+                </tr>
+                <tr>
+                  <td><code>⟦Substrate:Function⟧</code></td>
+                  <td>Optional annotation of substrate and function</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div className="overflow-x-auto mt-6">
+            <table>
+              <thead>
+                <tr>
+                  <th>Example</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><code>⟦Climate System⟧</code></td></tr>
+                <tr><td><code>⟦Neural Network∞⟧</code></td></tr>
+                <tr><td><code>⟦Market:Regulation⟧</code></td></tr>
+                <tr><td><code>⟦Mind:Self-Model⟧</code></td></tr>
+              </tbody>
+            </table>
+          </div>
 
           </Accordion>
 
@@ -161,8 +191,22 @@ export default function SyntaxPage() {
 
           <Accordion title="🌐 6. Semantic Kernels (◈) – Universal Functional Motifs">
           <p>Semantic Kernels are <strong>invariant functional patterns</strong> that recur across domains.</p>
-          <h3>Syntax:</h3>
-          <pre><code>{`◈_KernelName`}</code></pre>
+          <div className="overflow-x-auto">
+            <table>
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>Syntax</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Kernel identifier</td>
+                  <td><code>◈_KernelName</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
           <h3>Core Kernels:</h3>
           <div className="overflow-x-auto">
             <table>
@@ -307,16 +351,27 @@ export default function SyntaxPage() {
           <hr />
 
           <Accordion title="📜 11. Grammar Rules (Synergex Syntax Laws)">
-          <ol>
-            <li><strong>All expressions must begin and end with a system or kernel.</strong></li>
-            <li><strong>Feedback loops must be closed</strong>: <code>∮( ... → ... → ... )</code></li>
-            <li><strong>Emergence (<code>⊗</code>) requires irreducibility.</strong></li>
-            <li><strong>Isomorphism (<code>≣</code>) and meta-isomorphism (<code>≋</code>) must be justified by kernels or structure.</strong></li>
-            <li><strong>Recursive structures must be bounded.</strong></li>
-            <li><strong>Open boundaries (<code>∞</code>) require at least one external interaction.</strong></li>
-            <li><strong>Probabilistic operators (<code>ℙ</code>, <code>∿</code>) must specify context.</strong></li>
-            <li><strong>Abstraction layers (<code>Λ</code>) must be hierarchically consistent.</strong></li>
-          </ol>
+          <div className="overflow-x-auto">
+            <table>
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Rule</th>
+                  <th>Detail</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>1</td><td>Expression bounds</td><td>Begin and end with a system or kernel</td></tr>
+                <tr><td>2</td><td>Closed feedback</td><td>∮ loops must close: <code>∮( ... → ... → ... )</code></td></tr>
+                <tr><td>3</td><td>Emergence irreducibility</td><td><code>⊗</code> requires irreducibility</td></tr>
+                <tr><td>4</td><td>Isomorphism justification</td><td><code>≣</code> / <code>≋</code> justified by kernels or structure</td></tr>
+                <tr><td>5</td><td>Recursive bounds</td><td>Recursive structures must be bounded</td></tr>
+                <tr><td>6</td><td>Open boundary interaction</td><td><code>∞</code> requires at least one external interaction</td></tr>
+                <tr><td>7</td><td>Probabilistic context</td><td><code>ℙ</code>, <code>∿</code> must specify context</td></tr>
+                <tr><td>8</td><td>Layer consistency</td><td><code>Λ</code> abstraction layers must be hierarchical</td></tr>
+              </tbody>
+            </table>
+          </div>
           </Accordion>
 
           <hr />
