@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import SyntaxAccordion from '../../components/SyntaxAccordion'
 import LiveEditor from '../../components/LiveEditor'
+import Accordion from '../../components/Accordion'
 
 export const metadata = {
   title: 'Syntax Guide - Synergex',
@@ -8,99 +8,6 @@ export const metadata = {
 }
 
 export default function SyntaxPage() {
-  const syntaxSections = [
-    {
-      title: 'Core Concepts',
-      content: [
-        {
-          symbol: '⟦System⟧',
-          name: 'System Bracket',
-          meaning: 'Denotes a system, entity, or bounded context',
-          example: '⟦Climate⟧, ⟦Economy⟧, ⟦Immune⟧',
-          description: 'Systems are the fundamental building blocks of Synergex. They represent bounded contexts that can interact, transform, and evolve.'
-        },
-        {
-          symbol: '→',
-          name: 'Flow Arrow',
-          meaning: 'Indicates flow, transformation, or causal relationship',
-          example: '⟦Input⟧ → ⟦Process⟧ → ⟦Output⟧',
-          description: 'The flow arrow shows how systems transform and influence each other over time.'
-        },
-        {
-          symbol: '◈',
-          name: 'Kernel',
-          meaning: 'Core pattern, structure, or archetype',
-          example: '◈_Regulator, ◈_Amplifier, ◈_Filter',
-          description: 'Kernels are universal patterns that appear across different domains and systems.'
-        }
-      ]
-    },
-    {
-      title: 'Operators',
-      content: [
-        {
-          symbol: '⊗',
-          name: 'Coupling',
-          meaning: 'Interaction or coupling between systems',
-          example: '⟦A⟧ ⊗ ⟦B⟧',
-          description: 'Coupling represents the interaction between two or more systems, showing how they influence each other.'
-        },
-        {
-          symbol: '≅',
-          name: 'Isomorphism',
-          meaning: 'Structural similarity or equivalence',
-          example: '⟦Pattern⟧ ≅ ⟦Structure⟧',
-          description: 'Isomorphism reveals hidden similarities between seemingly different systems.'
-        },
-        {
-          symbol: '∮',
-          name: 'Feedback Loop',
-          meaning: 'Circular causality or feedback',
-          example: '⟦Output⟧ ∮ ⟦Input⟧',
-          description: 'Feedback loops show how systems can influence themselves through circular causality.'
-        }
-      ]
-    },
-    {
-      title: 'Modifiers',
-      content: [
-        {
-          symbol: '_',
-          name: 'Parameter',
-          meaning: 'Parameter or modifier for kernels',
-          example: '◈_Type, ◈_Strength, ◈_Duration',
-          description: 'Parameters allow kernels to be customized for specific contexts and applications.'
-        },
-        {
-          symbol: '^',
-          name: 'Transformation',
-          meaning: 'Transformation or evolution',
-          example: '⟦System⟧^T',
-          description: 'Transformation operators show how systems evolve and change over time.'
-        }
-      ]
-    },
-    {
-      title: 'Advanced Patterns',
-      content: [
-        {
-          symbol: '⟦A⟧ ⊗ ⟦B⟧ → ◈_Pattern ∮',
-          name: 'Complex Interaction',
-          meaning: 'Multiple systems interacting through a pattern with feedback',
-          example: '⟦Mind⟧ ⊗ ⟦World⟧ → ◈_Learning ∮',
-          description: 'Complex patterns combine multiple operators to model sophisticated system behaviors.'
-        },
-        {
-          symbol: '⟦System⟧^T ≅ ⟦Target⟧',
-          name: 'Transformation Goal',
-          meaning: 'System transformation toward a target state',
-          example: '⟦AI⟧^T ≅ ⟦Aligned⟧',
-          description: 'Transformation goals show the desired end state of system evolution.'
-        }
-      ]
-    }
-  ]
-
   return (
     <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -115,30 +22,316 @@ export default function SyntaxPage() {
           </p>
         </div>
 
-        {/* Navigation */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {syntaxSections.map((section, index) => (
-            <a
-              key={index}
-              href={`#${section.title.toLowerCase().replace(/\s+/g, '-')}`}
-              className="synergex-button-secondary text-sm"
-            >
-              {section.title}
-            </a>
-          ))}
-        </div>
+        {/* Full Syntax Guide (v1.1) */}
+        <article className="prose prose-invert max-w-none mb-16">
+          
 
-        {/* Syntax Sections */}
-        <div className="space-y-8 mb-16">
-          {syntaxSections.map((section, index) => (
-            <SyntaxAccordion key={index} section={section} />
-          ))}
+          <hr />
+
+          <Accordion title="🧱 1. Core Components" defaultOpen>
+          <p>Synergex is built from three foundational elements:</p>
+          <div className="overflow-x-auto">
+            <table>
+              <thead>
+                <tr>
+                  <th>Element</th>
+                  <th>Symbol</th>
+                  <th>Purpose</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>System</strong></td>
+                  <td><code>⟦ ⟧</code></td>
+                  <td>Encapsulates any entity, process, or structure</td>
+                </tr>
+                <tr>
+                  <td><strong>Interaction</strong></td>
+                  <td><code>→</code>, <code>⟷</code>, <code>∮</code>, …</td>
+                  <td>Denotes flow, coupling, or feedback</td>
+                </tr>
+                <tr>
+                  <td><strong>Semantic Kernel</strong></td>
+                  <td><code>◈_X</code></td>
+                  <td>Universal functional motif (invariant across domains)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Together, they form a language of <strong>relationships, dynamics, and emergence</strong>.</p>
+          </Accordion>
+
+          <hr />
+
+          <Accordion title="🔤 2. System Declaration">
+          <p>All systems are enclosed in double square brackets.</p>
+          <h3>Syntax:</h3>
+          <pre><code>{`⟦System Name⟧
+⟦System Name∞⟧  # Open boundary (interacts with environment)
+⟦Substrate:Function⟧  # Optional annotation`}</code></pre>
+          <h3>Examples:</h3>
+          <pre><code>{`⟦Climate System⟧
+⟦Neural Network∞⟧
+⟦Market:Regulation⟧
+⟦Mind:Self-Model⟧`}</code></pre>
+
+          </Accordion>
+
+          <hr />
+
+          <Accordion title="🔗 3. Interaction & Flow Operators">
+          <div className="overflow-x-auto">
+            <table>
+              <thead>
+                <tr>
+                  <th>Symbol</th>
+                  <th>Name</th>
+                  <th>Meaning</th>
+                  <th>Example</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><code>→</code></td><td>Directed Flow</td><td>Unidirectional influence</td><td><code>⟦Sun⟧ → ⟦Photosynthesis⟧</code></td></tr>
+                <tr><td><code>⟷</code></td><td>Reciprocal Interaction</td><td>Mutual coupling</td><td><code>⟦Predator⟧ ⟷ ⟦Prey⟧</code></td></tr>
+                <tr><td><code>⇄</code></td><td>Dynamic Equilibrium</td><td>Balanced bidirectional flow</td><td><code>⟦Supply⟧ ⇄ ⟦Demand⟧</code></td></tr>
+                <tr><td><code>⇏</code></td><td>Blocked Flow</td><td>Inhibited or failed interaction</td><td><code>⟦Signal⟧ → ❌ → ⟦Response⟧</code></td></tr>
+                <tr><td><code>⇝</code></td><td>Emergent Consequence</td><td>Indirect or non-linear outcome</td><td><code>⟦Policy⟧ ⇝ ⟦Unintended Effect⟧</code></td></tr>
+                <tr><td><code>↣</code></td><td>Injective Transformation</td><td>One-to-one mapping</td><td><code>⟦Gene⟧ ↣ ⟦Protein⟧</code></td></tr>
+                <tr><td><code>↠</code></td><td>Surjective Integration</td><td>Many-to-one convergence</td><td><code>⟦Sensors⟧ ↠ ⟦Decision Node⟧</code></td></tr>
+                <tr><td><code>↮</code></td><td>Decoupling</td><td>Loss of interaction</td><td><code>⟦Economy⟧ ↮ ⟦Ecology⟧</code></td></tr>
+                <tr><td><code>∿</code></td><td>Noise / Randomness</td><td>Stochastic distortion</td><td><code>⟦Signal⟧ ∿ → ⟦Receiver⟧</code></td></tr>
+              </tbody>
+            </table>
+          </div>
+          </Accordion>
+          <hr />
+
+          <Accordion title="🧩 4. System Composition & Structure">
+          <div className="overflow-x-auto">
+            <table>
+              <thead>
+                <tr>
+                  <th>Symbol</th>
+                  <th>Name</th>
+                  <th>Meaning</th>
+                  <th>Example</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><code>⊕</code></td><td>Functional Composition</td><td>Two systems combine into a new function</td><td><code>⟦Wheel⟧ ⊕ ⟦Axle⟧ → ⟦Cart⟧</code></td></tr>
+                <tr><td><code>⊗</code></td><td>Emergent Synthesis</td><td>Interaction generates a qualitatively new system</td><td><code>⟦Mind⟧ ⊗ ⟦Tool⟧ → ⟦Extended Cognition⟧^E</code></td></tr>
+                <tr><td><code>⊙</code></td><td>Core Integration</td><td>Central hub connecting subsystems</td><td><code>⟦Brain⟧ ← ⊙ → ⟦Senses⟧</code></td></tr>
+                <tr><td><code>∪</code></td><td>System Union</td><td>Aggregation without integration</td><td><code>⟦Forest⟧ ∪ ⟦River⟧</code></td></tr>
+                <tr><td><code>∩</code></td><td>System Overlap</td><td>Shared components or functions</td><td><code>⟦Economy⟧ ∩ ⟦Culture⟧</code></td></tr>
+                <tr><td><code>∖</code></td><td>Subtractive Refinement</td><td>Removal to refine function</td><td><code>⟦Theory⟧ ∖ ⟦Assumption⟧</code></td></tr>
+                <tr><td><code>≋</code></td><td>Meta-Isomorphism</td><td>Structural but not functional analogy</td><td><code>⟦Solar System⟧ ≋ ⟦Atom⟧</code></td></tr>
+              </tbody>
+            </table>
+          </div>
+          </Accordion>
+
+          <hr />
+
+          <Accordion title="🔁 5. Dynamics & Change">
+          <div className="overflow-x-auto">
+            <table>
+              <thead>
+                <tr>
+                  <th>Symbol</th>
+                  <th>Name</th>
+                  <th>Meaning</th>
+                  <th>Example</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><code>∇</code></td><td>Adaptive Gradient</td><td>Rate of change, learning, evolution</td><td><code>∇⟦AI Model⟧ = training</code></td></tr>
+                <tr><td><code>Δ</code></td><td>State Transition</td><td>Discrete change in system state</td><td><code>Δ(⟦Ice⟧ → ⟦Water⟧)</code></td></tr>
+                <tr><td><code>∂</code></td><td>Partial Influence</td><td>Partial derivative of behavior</td><td><code>∂⟦Ecosystem⟧/∂⟦Temperature⟧</code></td></tr>
+                <tr><td><code>∮</code></td><td>Feedback Loop</td><td>Closed-cycle regulation</td><td><code>∮(⟦Thermostat⟧ → ⟦Heater⟧ → ⟦Room⟧ → ⟦Thermostat⟧)</code></td></tr>
+                <tr><td><code>⟳</code></td><td>Recursive Cycle</td><td>Repeating process with memory</td><td><code>⟳(⟦Innovation⟧ → ⟦Adoption⟧ → ⟦New Norm⟧ → ⟦Innovation⟧)</code></td></tr>
+                <tr><td><code>↯</code></td><td>Phase Shift</td><td>Sudden qualitative change (tipping point)</td><td><code>⟦Climate⟧ ↯ ⟦New Regime⟧</code></td></tr>
+                <tr><td><code>⥁</code></td><td>Hysteresis</td><td>Path-dependent state retention</td><td><code>⟦Economy⥁⟧ ≠ ⟦Economy⟧ after crisis</code></td></tr>
+                <tr><td><code>↝</code></td><td>Tendency or Drift</td><td>Soft attraction toward a state</td><td><code>⟦Public Opinion↝⟧ → ⟦Policy Change⟧</code></td></tr>
+              </tbody>
+            </table>
+          </div>
+          </Accordion>
+
+          <hr />
+
+          <Accordion title="🌐 6. Semantic Kernels (◈) – Universal Functional Motifs">
+          <p>Semantic Kernels are <strong>invariant functional patterns</strong> that recur across domains.</p>
+          <h3>Syntax:</h3>
+          <pre><code>{`◈_KernelName`}</code></pre>
+          <h3>Core Kernels:</h3>
+          <div className="overflow-x-auto">
+            <table>
+              <thead>
+                <tr>
+                  <th>Kernel</th>
+                  <th>Function</th>
+                  <th>Example Domains</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><code>◈_Regulator</code></td><td>Maintains stability via feedback</td><td>Biology, engineering, policy</td></tr>
+                <tr><td><code>◈_Amplifier</code></td><td>Increases signal or influence</td><td>Media, economics, immunology</td></tr>
+                <tr><td><code>◈_Oscillator</code></td><td>Generates rhythmic behavior</td><td>Neuroscience, climate, markets</td></tr>
+                <tr><td><code>◈_Replicator</code></td><td>Self-copies</td><td>Genetics, memes, algorithms</td></tr>
+                <tr><td><code>◈_Filter</code></td><td>Selective passage</td><td>Blood-brain barrier, firewalls, peer review</td></tr>
+                <tr><td><code>◈_Integrator</code></td><td>Combines inputs into output</td><td>Brain, fusion reactor, policy team</td></tr>
+                <tr><td><code>◈_Resonator</code></td><td>Synchronizes frequencies</td><td>Fireflies, power grids, rituals</td></tr>
+                <tr><td><code>◈_Boundary</code></td><td>Manages exchange</td><td>Cell membrane, borders, APIs</td></tr>
+                <tr><td><code>◈_Selector</code></td><td>Drives adaptation via selection</td><td>Evolution, markets, science</td></tr>
+                <tr><td><code>◈_Transducer</code></td><td>Converts energy/info forms</td><td>Microphone, neuron, photosynthesis</td></tr>
+                <tr><td><code>◈_Catalyst</code></td><td>Accelerates change without being consumed</td><td>Chemistry, innovation, mediation</td></tr>
+                <tr><td><code>◈_Mediator</code></td><td>Enables indirect interaction</td><td>Diplomacy, enzymes, middleware</td></tr>
+                <tr><td><code>◈_Entropy</code></td><td>Drives disorder/dispersion</td><td>Thermodynamics, information theory</td></tr>
+                <tr><td><code>◈_Homeostat</code></td><td>Maintains balance across shifts</td><td>Physiology, ecology, governance</td></tr>
+              </tbody>
+            </table>
+          </div>
+          </Accordion>
+
+          <hr />
+
+          <Accordion title="🧠 7. Cognitive & Epistemic Operators">
+          <div className="overflow-x-auto">
+            <table>
+              <thead>
+                <tr>
+                  <th>Symbol</th>
+                  <th>Name</th>
+                  <th>Meaning</th>
+                  <th>Example</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><code>?</code></td><td>Inquiry Node</td><td>Represents a question</td><td><code>⟦Climate Change?⟧</code></td></tr>
+                <tr><td><code>!</code></td><td>Insight Trigger</td><td>Marks discovery</td><td><code>⟦Eureka!⟧ → ⟦Theory⟧</code></td></tr>
+                <tr><td><code>⁇</code></td><td>Uncertainty Field</td><td>Zone of ambiguity</td><td><code>⟦Dark Matter⁇⟧</code></td></tr>
+                <tr><td><code>⊧</code></td><td>Knowledge Entailment</td><td>One concept implies another</td><td><code>⟦Evolution⟧ ⊧ ⟦Adaptation⟧</code></td></tr>
+                <tr><td><code>⊨</code></td><td>Model Validity</td><td>Model fits evidence</td><td><code>⟦Model⟧ ⊨ ⟦Data⟧</code></td></tr>
+                <tr><td><code>≈</code></td><td>Approximate Equivalence</td><td>Similar but not identical</td><td><code>⟦Map≈⟧ ⟦Territory⟧</code></td></tr>
+                <tr><td><code>≬</code></td><td>Cognitive Dissonance</td><td>Conflicting knowledge</td><td><code>⟦Belief⟧ ≬ ⟦Evidence⟧</code></td></tr>
+                <tr><td><code>⇝→</code></td><td>Abductive Leap</td><td>Inference to best explanation</td><td><code>⟦Symptom⟧ ⇝→ ⟦Diagnosis⟧</code></td></tr>
+                <tr><td><code>⟪ ⟫</code></td><td>Mental Model Encapsulator</td><td>Internal schema</td><td><code>⟪Climate Crisis⟫</code></td></tr>
+                <tr><td><code>⊕̷</code></td><td>Cognitive Bias</td><td>Distorted integration</td><td><code>⟦Data⟧ ⊕̷ ⟦Belief⟧ → ⟦Misinterpretation⟧</code></td></tr>
+              </tbody>
+            </table>
+          </div>
+          </Accordion>
+
+          <hr />
+
+          <Accordion title="📏 8. Temporal, Scale & Abstraction Operators">
+          <div className="overflow-x-auto">
+            <table>
+              <thead>
+                <tr>
+                  <th>Symbol</th>
+                  <th>Name</th>
+                  <th>Meaning</th>
+                  <th>Example</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><code>𝕋</code></td><td>Temporal Axis</td><td>Time dimension</td><td><code>𝕋(⟦Ecosystem⟧)</code></td></tr>
+                <tr><td><code>𝒮</code></td><td>Scale Level</td><td>Hierarchical level</td><td><code>𝒮₃(⟦Neuron⟧) → 𝒮₄(⟦Brain⟧)</code></td></tr>
+                <tr><td><code>Λ₀, Λ₁, Λ₂…</code></td><td>Abstraction Layer</td><td>Micro/meso/macro nesting</td><td><code>Λ₀⟦Neuron⟧ → Λ₁⟦Brain⟧ → Λ₂⟦Culture⟧</code></td></tr>
+                <tr><td><code>⇉</code></td><td>Rapid Transition</td><td>Fast dynamic shift</td><td><code>⟦Viral Spread⟧ ⇉</code></td></tr>
+                <tr><td><code>⇝ slow</code></td><td>Gradual Emergence</td><td>Slow, cumulative change</td><td><code>⟦Cultural Shift⇝ slow⟧</code></td></tr>
+                <tr><td><code>↻</code></td><td>Temporal Loop</td><td>Time-based recurrence</td><td><code>⟦Seasons⟧ ↻</code></td></tr>
+                <tr><td><code>⊳</code></td><td>Precedes</td><td>Temporal ordering</td><td><code>⟦Cause⟧ ⊳ ⟦Effect⟧</code></td></tr>
+                <tr><td><code>⊲</code></td><td>Follows</td><td>Reverse temporal</td><td><code>⟦Effect⊲⟧ after ⟦Intervention⟧</code></td></tr>
+                <tr><td><code>⨀</code></td><td>Simultaneity</td><td>Concurrent events</td><td><code>⟦Earthquake⨀⟧ and ⟦Tsunami⨀⟧</code></td></tr>
+              </tbody>
+            </table>
+          </div>
+          </Accordion>
+
+          <hr />
+
+          <Accordion title="⚖️ 9. Value & Ethics Operators">
+          <div className="overflow-x-auto">
+            <table>
+              <thead>
+                <tr>
+                  <th>Symbol</th>
+                  <th>Name</th>
+                  <th>Meaning</th>
+                  <th>Example</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><code>⚖</code></td><td>Ethical Balance</td><td>Weighs trade-offs</td><td><code>⟦Privacy⚖⟧ vs ⟦Security⟧</code></td></tr>
+                <tr><td><code>❤</code></td><td>Human-Centric Value</td><td>Empathy, well-being</td><td><code>⟦Policy⟧ ❤ ⟶ ⟦Equity⟧</code></td></tr>
+                <tr><td><code>⚠</code></td><td>Risk Indicator</td><td>Potential harm</td><td><code>⟦AI System⚠⟧ = bias risk</code></td></tr>
+                <tr><td><code>✅</code></td><td>Sustainable Alignment</td><td>Ethically sound</td><td><code>⟦Technology✅⟧</code></td></tr>
+                <tr><td><code>❌</code></td><td>Systemic Harm</td><td>Irreversible damage</td><td><code>⟦Exploitation❌⟧</code></td></tr>
+                <tr><td><code>∞+</code></td><td>Infinite Game</td><td>Long-term, cooperative survival</td><td><code>⟦Civilization∞+⟧</code></td></tr>
+                <tr><td><code>◿</code></td><td>Care Network</td><td>Mutual support structure</td><td><code>⟦Community◿⟧ → ⟦Resilience⟧</code></td></tr>
+              </tbody>
+            </table>
         </div>
+          </Accordion>
+
+          <hr />
+
+          <Accordion title="🔁 10. Meta-Linguistic & Operational Operators">
+          <div className="overflow-x-auto">
+            <table>
+              <thead>
+                <tr>
+                  <th>Symbol</th>
+                  <th>Name</th>
+                  <th>Meaning</th>
+                  <th>Example</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><code>⟦⟧^T</code></td><td>Translated System</td><td>Cross-domain mapping</td><td><code>⟦Immune System⟧^T → ⟦Cybersecurity⟧</code></td></tr>
+                <tr><td><code>⟦⟧^S</code></td><td>Simulated Instance</td><td>Computational model</td><td>⟦City⟧^S → Agent-Based Model</td></tr>
+                <tr><td><code>⟦⟧^C</code></td><td>Co-Created System</td><td>Emergent through collaboration</td><td><code>⟦Knowledge Commons⟧^C</code></td></tr>
+                <tr><td><code>⟦⟧^E</code></td><td>Emergent Identity</td><td>Irreducible system</td><td><code>⟦Consciousness⟧^E</code></td></tr>
+                <tr><td><code>⟪⟫ → ⟦⟧</code></td><td>Mental to Systemic</td><td>Internal model externalized</td><td><code>⟪Vision⟫ → ⟦Startup⟧</code></td></tr>
+                <tr><td><code>Σ(⟦⟧)</code></td><td>Systemic Summation</td><td>Totality of a system class</td><td>Σ(⟦Languages⟧) = Human Expression</td></tr>
+                <tr><td><code>ℙ(⟦⟧)</code></td><td>Probability Measure</td><td>Likelihood of state</td><td><code>ℙ(⟦Earthquake⟧) = 0.02/yr</code></td></tr>
+                <tr><td><code>evaluate(⟦⟧)</code></td><td>Operational Evaluation</td><td>Returns system state vector</td><td><code>evaluate(⟦Market⟧)</code></td></tr>
+                <tr><td><code>simulate(∮(...))</code></td><td>Dynamic Simulation</td><td>Produces time-trace</td><td><code>simulate(∮⟦Thermostat⟧)</code></td></tr>
+              </tbody>
+            </table>
+        </div>
+          </Accordion>
+
+          <hr />
+
+          <Accordion title="📜 11. Grammar Rules (Synergex Syntax Laws)">
+          <ol>
+            <li><strong>All expressions must begin and end with a system or kernel.</strong></li>
+            <li><strong>Feedback loops must be closed</strong>: <code>∮( ... → ... → ... )</code></li>
+            <li><strong>Emergence (<code>⊗</code>) requires irreducibility.</strong></li>
+            <li><strong>Isomorphism (<code>≣</code>) and meta-isomorphism (<code>≋</code>) must be justified by kernels or structure.</strong></li>
+            <li><strong>Recursive structures must be bounded.</strong></li>
+            <li><strong>Open boundaries (<code>∞</code>) require at least one external interaction.</strong></li>
+            <li><strong>Probabilistic operators (<code>ℙ</code>, <code>∿</code>) must specify context.</strong></li>
+            <li><strong>Abstraction layers (<code>Λ</code>) must be hierarchically consistent.</strong></li>
+          </ol>
+          </Accordion>
+
+          <hr />
+
+          
+
+          
+
+          
+        </article>
 
         {/* Live Editor */}
         <div className="bg-gray-800 rounded-lg p-8 border border-gray-700">
           <h2 className="text-2xl font-semibold text-white mb-6 text-center">
-            Try Synergex Live
+            Try System Live
           </h2>
           <LiveEditor />
         </div>

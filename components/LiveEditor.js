@@ -40,7 +40,8 @@ export default function LiveEditor() {
     '⟦Input⟧ → ⟦Process⟧ → ⟦Output⟧',
     '⟦A⟧ ⊗ ⟦B⟧ → ◈_Pattern ∮',
     '⟦Mind⟧ ⊗ ⟦World⟧ → ◈_Learning ∮',
-    '⟦AI⟧^T ≅ ⟦Aligned⟧'
+    '⟦AI⟧^T ≅ ⟦Aligned⟧',
+    `⟦Climate System∞⟧ → ⟦CO2 Rise⟧ → ⟦Temperature Gradient⟧\n→ ⟦Glacial Melt⟧ → ⟦Sea Level Rise⟧ → ⟦Coastal Stress⟧ ∮ ⟦Adaptation Cost⟧\n→ ∇⟦Policy Response⟧ ⊗ ⟦Public Awareness⟧ → ⟦Renewable Transition⟧\n\n# Tipping Point\n⟦Permafrost Thaw⟧ ↯ → ⟦Methane Burst⟧ ∿ → ∮ → ◈_Amplifier\n\n# Isomorphism vs Meta-Isomorphism\n⟦Carbon Tax⟧ ≣ ⟦Immune Response⟧ via ◈_Regulator\n⟦Solar System⟧ ≋ ⟦Atom⟧ (structural analogy)\n\n# Probability\nℙ(⟦Extreme Heatwave⟧) = 0.12/yr\n\n# Goal\n⟦Stable Climate⟧ ← ❤ ← ⟦Intergenerational Equity⟧ ← ⊂ ← ⟦Global Cooperation⟧`
   ]
 
   return (
