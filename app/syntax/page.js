@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import LiveEditor from '../../components/LiveEditor'
 import Accordion from '../../components/Accordion'
 
 export const metadata = {
@@ -23,12 +22,12 @@ export default function SyntaxPage() {
         </div>
 
         {/* Full Syntax Guide (v1.1) */}
-        <article className="prose prose-invert max-w-none mb-16">
+        <article className="prose prose-invert max-w-none mb-16 sgx-syntax">
           
 
           <hr />
 
-          <Accordion title="🧱 1. Core Components" defaultOpen>
+          <Accordion title="🧩 1. Core Components" defaultOpen>
           <p>Synergex is built from three foundational elements:</p>
           <div className="overflow-x-auto">
             <table>
@@ -63,7 +62,7 @@ export default function SyntaxPage() {
 
           <hr />
 
-          <Accordion title="🔤 2. System Declaration">
+          <Accordion title="🏷️ 2. System Declaration">
           <p>All systems are enclosed in double square brackets.</p>
           <div className="overflow-x-auto">
             <table>
@@ -136,7 +135,7 @@ export default function SyntaxPage() {
           </Accordion>
           <hr />
 
-          <Accordion title="🧩 4. System Composition & Structure">
+          <Accordion title="🧱 4. System Composition & Structure">
           <div className="overflow-x-auto">
             <table>
               <thead>
@@ -162,7 +161,7 @@ export default function SyntaxPage() {
 
           <hr />
 
-          <Accordion title="🔁 5. Dynamics & Change">
+          <Accordion title="⏳ 5. Dynamics & Change">
           <div className="overflow-x-auto">
             <table>
               <thead>
@@ -268,7 +267,7 @@ export default function SyntaxPage() {
 
           <hr />
 
-          <Accordion title="📏 8. Temporal, Scale & Abstraction Operators">
+          <Accordion title="📐 8. Temporal, Scale & Abstraction Operators">
           <div className="overflow-x-auto">
             <table>
               <thead>
@@ -322,7 +321,7 @@ export default function SyntaxPage() {
 
           <hr />
 
-          <Accordion title="🔁 10. Meta-Linguistic & Operational Operators">
+          <Accordion title="🛠️ 10. Meta-Linguistic & Operational Operators">
           <div className="overflow-x-auto">
             <table>
               <thead>
@@ -335,11 +334,11 @@ export default function SyntaxPage() {
               </thead>
               <tbody>
                 <tr><td><code>⟦⟧^T</code></td><td>Translated System</td><td>Cross-domain mapping</td><td><code>⟦Immune System⟧^T → ⟦Cybersecurity⟧</code></td></tr>
-                <tr><td><code>⟦⟧^S</code></td><td>Simulated Instance</td><td>Computational model</td><td>⟦City⟧^S → Agent-Based Model</td></tr>
+                <tr><td><code>⟦⟧^S</code></td><td>Simulated Instance</td><td>Computational model</td><td><code>⟦City⟧^S → Agent-Based Model</code></td></tr>
                 <tr><td><code>⟦⟧^C</code></td><td>Co-Created System</td><td>Emergent through collaboration</td><td><code>⟦Knowledge Commons⟧^C</code></td></tr>
                 <tr><td><code>⟦⟧^E</code></td><td>Emergent Identity</td><td>Irreducible system</td><td><code>⟦Consciousness⟧^E</code></td></tr>
                 <tr><td><code>⟪⟫ → ⟦⟧</code></td><td>Mental to Systemic</td><td>Internal model externalized</td><td><code>⟪Vision⟫ → ⟦Startup⟧</code></td></tr>
-                <tr><td><code>Σ(⟦⟧)</code></td><td>Systemic Summation</td><td>Totality of a system class</td><td>Σ(⟦Languages⟧) = Human Expression</td></tr>
+                <tr><td><code>Σ(⟦⟧)</code></td><td>Systemic Summation</td><td>Totality of a system class</td><td><code>Σ(⟦Languages⟧) = Human Expression</code></td></tr>
                 <tr><td><code>ℙ(⟦⟧)</code></td><td>Probability Measure</td><td>Likelihood of state</td><td><code>ℙ(⟦Earthquake⟧) = 0.02/yr</code></td></tr>
                 <tr><td><code>evaluate(⟦⟧)</code></td><td>Operational Evaluation</td><td>Returns system state vector</td><td><code>evaluate(⟦Market⟧)</code></td></tr>
                 <tr><td><code>simulate(∮(...))</code></td><td>Dynamic Simulation</td><td>Produces time-trace</td><td><code>simulate(∮⟦Thermostat⟧)</code></td></tr>
@@ -382,14 +381,6 @@ export default function SyntaxPage() {
 
           
         </article>
-
-        {/* Live Editor */}
-        <div className="bg-gray-800 rounded-lg p-8 border border-gray-700">
-          <h2 className="text-2xl font-semibold text-white mb-6 text-center">
-            Try System Live
-          </h2>
-          <LiveEditor />
-        </div>
 
         {/* Next Steps */}
         <div className="text-center mt-16">

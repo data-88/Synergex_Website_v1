@@ -35,5 +35,56 @@
   .synergex-tooltip {
     @apply absolute z-40 px-3 py-2 text-sm text-white bg-gray-900 rounded-lg shadow-lg border border-gray-700 opacity-0 pointer-events-none transition-opacity duration-200;
   }
+
+  /* Tables inside prose on dark backgrounds */
+  .prose table {
+    @apply w-full table-auto text-left border-collapse;
+  }
+
+  .prose thead th {
+    @apply text-gray-200 font-semibold bg-gray-800/60 px-4 py-3 border-b border-gray-700;
+  }
+
+  .prose tbody td {
+    @apply text-gray-300 px-4 py-3 align-top border-b border-gray-800;
+  }
+
+  .prose tbody tr:hover td {
+    @apply bg-gray-800/30;
+  }
+
+  .prose hr {
+    @apply my-10 border-gray-800;
+  }
+
+  .prose p {
+    @apply leading-relaxed;
+  }
+
+  /* Syntax symbol chips */
+  .sgx-syntax code {
+    @apply inline-flex items-center px-2.5 py-1 rounded-md bg-gray-900/80 text-synergex-accent border border-gray-700 font-medium tracking-tight;
+  }
+
+  .sgx-syntax td code,
+  .sgx-syntax th code {
+    @apply text-base; /* larger for tables */
+  }
+
+  .sgx-syntax thead th code {
+    @apply text-gray-200 border-none bg-transparent px-0 py-0;
+  }
+
+  .sgx-syntax code.kern {
+    @apply text-indigo-300 bg-indigo-900/30 border-indigo-700;
+  }
+
+  .sgx-syntax code.op {
+    @apply text-emerald-300 bg-emerald-900/30 border-emerald-700;
+  }
+
+  .sgx-syntax code.warn {
+    @apply text-amber-300 bg-amber-900/30 border-amber-700;
+  }
 }
 
