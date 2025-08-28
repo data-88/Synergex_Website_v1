@@ -152,12 +152,12 @@ export default function AboutPage() {
                 <div className="w-32 h-32 bg-synergex-accent rounded-full mx-auto mb-4 flex items-center justify-center text-4xl">
                   👨‍🔬
                 </div>
-                <h3 className="text-xl font-semibold text-white">Dr. Alexander Chen</h3>
+                <h3 className="text-xl font-semibold text-white">Andrew Brauteseth</h3>
                 <p className="text-synergex-accent">Creator & Lead Researcher</p>
               </div>
               <div className="flex-1">
                 <p className="text-gray-300 mb-4">
-                  Dr. Chen is a systems theorist and complexity researcher with over 15 years of experience 
+                  Andrew Brauteseth is a systems theorist and complexity researcher with over 15 years of experience 
                   in modeling complex adaptive systems. His work spans multiple domains including artificial 
                   intelligence, climate science, and cognitive architecture.
                 </p>
@@ -166,7 +166,7 @@ export default function AboutPage() {
                   different systems and his frustration with the lack of a common language for systems thinking.
                 </p>
                 <p className="text-gray-300">
-                  Today, Dr. Chen leads the Synergex project and collaborates with researchers worldwide 
+                  Today, Andrew Brauteseth leads the Synergex project and collaborates with researchers worldwide 
                   to advance the field of universal systems modeling.
                 </p>
               </div>

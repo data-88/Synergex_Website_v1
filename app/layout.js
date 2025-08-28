@@ -13,6 +13,7 @@ export const metadata = {
   creator: 'Synergex',
   publisher: 'Synergex',
   robots: 'index, follow',
+  metadataBase: new URL('https://synergex.org'),
   openGraph: {
     title: 'Synergex — The Language of Systems',
     description: 'Universal Systems-of-Systems Meta Language (USSML) for modeling complex systems, flows, and feedback loops.',
@@ -35,7 +36,11 @@ export const metadata = {
     description: 'Universal Systems-of-Systems Meta Language (USSML) for modeling complex systems, flows, and feedback loops.',
     images: ['/og-image.png'],
   },
-  viewport: 'width=device-width, initial-scale=1',
+}
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
   themeColor: '#0d1b2a',
 }
 
