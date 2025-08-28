@@ -2,11 +2,6 @@
 
 import { useState } from 'react'
 
-export const metadata = {
-  title: 'Contact - Synergex',
-  description: 'Get in touch with the Synergex team for questions, collaboration, or support.',
-}
-
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',

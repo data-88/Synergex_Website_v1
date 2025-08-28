@@ -518,7 +518,7 @@ body {
 .synergex-tooltip{
   pointer-events: none;
   position: absolute;
-  z-index: 50;
+  z-index: 40;
   border-radius: 0.5rem;
   border-width: 1px;
   --tw-border-opacity: 1;
@@ -570,8 +570,8 @@ body {
 .top-full{
   top: 100%;
 }
-.z-50{
-  z-index: 50;
+.z-\[100\]{
+  z-index: 100;
 }
 .col-span-1{
   grid-column: span 1 / span 1;
