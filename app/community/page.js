@@ -43,8 +43,8 @@ export default function CommunityPage() {
 
   const events = [
     {
-      name: 'Synergex Summit 2024',
-      date: 'June 15-17, 2024',
+      name: 'Synergex Summit 2025',
+      date: 'June 15-17, 2025',
       location: 'San Francisco, CA',
       description: 'Annual conference bringing together researchers, practitioners, and enthusiasts.',
       type: 'Conference'

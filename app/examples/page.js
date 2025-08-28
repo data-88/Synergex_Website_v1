@@ -3,7 +3,7 @@ import ExampleCard from '../../components/ExampleCard'
 
 export const metadata = {
   title: 'Examples - Synergex',
-  description: 'Real-world Synergex models including climate systems, banking defense, immune systems, and AI alignment.',
+  description: 'Real-world Synergex models including climate systems, global financial systems, immune systems, and AI alignment.',
 }
 
 export default function ExamplesPage() {
@@ -17,11 +17,11 @@ export default function ExamplesPage() {
       complexity: 'Intermediate'
     },
     {
-      title: 'SABRIC Banking Defense',
-      domain: 'Cybersecurity',
-      description: 'South African Banking Risk Information Centre defense system against financial fraud.',
-      synergexCode: '⟦Threat⟧ → ◈_Detector → ⟦Response⟧ → ◈_Adaptor ∮',
-      diagram: 'sabric-defense',
+      title: 'Global Financial Systems',
+      domain: 'Economics',
+      description: 'Systemic risk, leverage, contagion, and regulatory feedback across interconnected markets.',
+      synergexCode: '⟦Liquidity⟧ → ◈_Leverage → ⟦Contagion⟧ → ◈_Regulator ∮',
+      diagram: 'global-financial-systems',
       complexity: 'Advanced'
     },
     {

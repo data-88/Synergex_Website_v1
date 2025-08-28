@@ -66,17 +66,17 @@ export default function ToolsPage() {
     {
       name: 'Real-time Collaboration',
       description: 'Collaborative editing and modeling of Synergex expressions in real-time.',
-      eta: 'Q2 2024'
+      eta: 'Q2 2025'
     },
     {
       name: 'API Integration',
       description: 'RESTful API for programmatic access to Synergex tools and services.',
-      eta: 'Q3 2024'
+      eta: 'Q3 2025'
     },
     {
       name: 'Mobile App',
       description: 'Native mobile application for creating and viewing Synergex models on the go.',
-      eta: 'Q4 2024'
+      eta: 'Q4 2025'
     }
   ]
 

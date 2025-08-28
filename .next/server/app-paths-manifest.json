@@ -1,8 +1,6 @@
 {
-  "/page": "app/page.js",
   "/syntax/page": "app/syntax/page.js",
   "/examples/page": "app/examples/page.js",
   "/community/page": "app/community/page.js",
-  "/learn/page": "app/learn/page.js",
-  "/tools/page": "app/tools/page.js"
+  "/learn/page": "app/learn/page.js"
 }

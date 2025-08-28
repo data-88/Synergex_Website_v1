@@ -83,7 +83,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-sm text-gray-400 mb-4 md:mb-0">
-            © 2024 Synergex. Licensed under{' '}
+            © 2025 Synergex. Licensed under{' '}
             <a 
               href="https://creativecommons.org/licenses/by/4.0/" 
               target="_blank" 
