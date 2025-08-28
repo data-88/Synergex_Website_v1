@@ -1,5 +1,6 @@
 {
-  "/syntax/page": "app/syntax/page.js",
+  "/page": "app/page.js",
+  "/tools/page": "app/tools/page.js",
   "/examples/page": "app/examples/page.js",
-  "/page": "app/page.js"
+  "/syntax/page": "app/syntax/page.js"
 }
