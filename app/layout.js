@@ -1,5 +1,6 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
+import Script from 'next/script'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
@@ -55,6 +56,20 @@ export default function RootLayout({ children }) {
           </main>
           <Footer />
         </div>
+
+        {/* Google tag (gtag.js) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-M27MH4CTDV"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-M27MH4CTDV');
+          `}
+        </Script>
       </body>
     </html>
   )
