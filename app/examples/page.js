@@ -88,6 +88,38 @@ export default function ExamplesPage() {
           ))}
         </div>
 
+        {/* PDF Resources */}
+        <div className="bg-gray-800 rounded-lg p-8 border border-gray-700 mb-12">
+          <h3 className="text-2xl font-semibold text-white mb-4 text-center">Resources (PDFs)</h3>
+          <p className="text-gray-300 mb-6 text-center">Download reference materials and reports.</p>
+          <ul className="max-w-3xl mx-auto space-y-3">
+            <li>
+              <a href="/us-china-sa.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-synergex-accent hover:underline">
+                <span className="text-gray-300">📄</span>
+                <span>US–China–SA Analysis</span>
+              </a>
+            </li>
+            <li>
+              <a href="/SAN.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-synergex-accent hover:underline">
+                <span className="text-gray-300">📄</span>
+                <span>SAN Report</span>
+              </a>
+            </li>
+            <li>
+              <a href="/sarb-synergex.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-synergex-accent hover:underline">
+                <span className="text-gray-300">📄</span>
+                <span>SARB Brief</span>
+              </a>
+            </li>
+            <li>
+              <a href="/sa-air-systems.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-synergex-accent hover:underline">
+                <span className="text-gray-300">📄</span>
+                <span>SA Air Systems</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
         {/* Call to Action */}
         <div className="text-center bg-gray-800 rounded-lg p-12 border border-gray-700">
           <h2 className="text-3xl font-bold text-white mb-6">

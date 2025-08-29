@@ -1,9 +1,3 @@
 {
-  "/page": "app/page.js",
-  "/tools/page": "app/tools/page.js",
-  "/syntax/page": "app/syntax/page.js",
-  "/examples/page": "app/examples/page.js",
-  "/community/page": "app/community/page.js",
-  "/about/page": "app/about/page.js",
-  "/contact/page": "app/contact/page.js"
+  "/examples/page": "app/examples/page.js"
 }
