@@ -94,6 +94,12 @@ export default function ExamplesPage() {
           <p className="text-gray-300 mb-6 text-center">Download reference materials and reports.</p>
           <ul className="max-w-3xl mx-auto space-y-3">
             <li>
+              <a href="/energy.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-synergex-accent hover:underline">
+                <span className="text-gray-300">📄</span>
+                <span>Energy Systems and Eskom in South Africa</span>
+              </a>
+            </li>
+            <li>
               <a href="/us-china-sa.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-synergex-accent hover:underline">
                 <span className="text-gray-300">📄</span>
                 <span>US–China–SA Analysis</span>
@@ -102,7 +108,7 @@ export default function ExamplesPage() {
             <li>
               <a href="/SAN.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-synergex-accent hover:underline">
                 <span className="text-gray-300">📄</span>
-                <span>SAN Report</span>
+                <span>South African Navy Report</span>
               </a>
             </li>
             <li>
