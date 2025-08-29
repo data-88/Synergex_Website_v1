@@ -24,7 +24,6 @@ export default function SyntaxPage() {
         {/* Full Syntax Guide (v1.1) */}
         <article className="prose prose-invert max-w-none mb-16 sgx-syntax">
           
-
           <hr />
 
           <Accordion title="🧩 1. Core Components" defaultOpen>
@@ -103,7 +102,6 @@ export default function SyntaxPage() {
               </tbody>
             </table>
           </div>
-
           </Accordion>
 
           <hr />
@@ -133,6 +131,7 @@ export default function SyntaxPage() {
             </table>
           </div>
           </Accordion>
+
           <hr />
 
           <Accordion title="🧱 4. System Composition & Structure">
@@ -316,7 +315,7 @@ export default function SyntaxPage() {
                 <tr><td><code>◿</code></td><td>Care Network</td><td>Mutual support structure</td><td><code>⟦Community◿⟧ → ⟦Resilience⟧</code></td></tr>
               </tbody>
             </table>
-        </div>
+          </div>
           </Accordion>
 
           <hr />
@@ -344,7 +343,53 @@ export default function SyntaxPage() {
                 <tr><td><code>simulate(∮(...))</code></td><td>Dynamic Simulation</td><td>Produces time-trace</td><td><code>simulate(∮⟦Thermostat⟧)</code></td></tr>
               </tbody>
             </table>
-        </div>
+          </div>
+          </Accordion>
+
+          <hr />
+
+          <Accordion title="🧮 12. Logical Operators" defaultOpen>
+          <p>Logical operators enable <strong>compound conditions</strong>, <strong>ethical alignment checks</strong>, and <strong>formal validation</strong> within system models.</p>
+          
+          <div className="overflow-x-auto">
+            <table>
+              <thead>
+                <tr>
+                  <th>Symbol</th>
+                  <th>Name</th>
+                  <th>Meaning</th>
+                  <th>Example</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>∧</code></td>
+                  <td>Logical AND</td>
+                  <td>Both conditions must be true</td>
+                  <td><code>⟦Safe⟧ ∧ ⟦Fair⟧ → ⟦Aligned AI⟧</code></td>
+                </tr>
+                <tr>
+                  <td><code>∨</code></td>
+                  <td>Logical OR</td>
+                  <td>At least one condition is true</td>
+                  <td><code>⟦Threat⟧ = ⟦Cyber⟧ ∨ ⟦Physical⟧</code></td>
+                </tr>
+                <tr>
+                  <td><code>¬</code></td>
+                  <td>Negation (NOT)</td>
+                  <td>Condition is false</td>
+                  <td><code>¬(⟦Harmful⟧) → ⟦Permit⟧</code></td>
+                </tr>
+                <tr>
+                  <td><code>⊻</code></td>
+                  <td>Exclusive OR (XOR)</td>
+                  <td>Exactly one condition is true</td>
+                  <td><code>⟦Centralized⟧ ⊻ ⟦Decentralized⟧ → ⟦Governance Choice⟧</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
           </Accordion>
 
           <hr />
@@ -368,6 +413,7 @@ export default function SyntaxPage() {
                 <tr><td>6</td><td>Open boundary interaction</td><td><code>∞</code> requires at least one external interaction</td></tr>
                 <tr><td>7</td><td>Probabilistic context</td><td><code>ℙ</code>, <code>∿</code> must specify context</td></tr>
                 <tr><td>8</td><td>Layer consistency</td><td><code>Λ</code> abstraction layers must be hierarchical</td></tr>
+                <tr><td>9</td><td>Logical well-formedness</td><td>Expressions with <code>∧</code>, <code>∨</code>, <code>¬</code>, <code>⊻</code> must be resolvable and contextually valid</td></tr>
               </tbody>
             </table>
           </div>
@@ -375,11 +421,6 @@ export default function SyntaxPage() {
 
           <hr />
 
-          
-
-          
-
-          
         </article>
 
         {/* Next Steps */}
@@ -400,4 +441,3 @@ export default function SyntaxPage() {
     </div>
   )
 }
-
